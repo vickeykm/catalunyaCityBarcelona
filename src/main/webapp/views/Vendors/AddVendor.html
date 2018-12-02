@@ -1,10 +1,16 @@
-
-<div class="jumbotron">
+<div class="jumbotron" ng-controller="myCtrl">
   <h1>Add Vendor</h1>
 
-  <p class="lead">
-   This is a demo website wo be dealed with Add new Tenant to the website.
-  </p>
-
-  <p><a class="btn btn-lg btn-success" ng-href="#/contact">Contact details</a></p>
+   <form novalidate>
+    Type:<br>
+    <select ng-model="type" ng-options="x for x in types"></select><br>
+    Name:<br>
+    <input type="text" ng-model="name"><br>
+	Contact Number:<br>
+    <input type="text" ng-model="number"><br>
+	Email:<br>
+    <input type="text" ng-model="email"><br>
+	<br>
+	<button ng-click="add()">Add</button>
+  </form>
 </div>

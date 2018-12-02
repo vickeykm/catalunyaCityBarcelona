@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>demo site for an angularjs simple website</title>
+    <meta name="description" content="">
+
+    <!-- twitter bootstrap and additional styles -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- navigation configuration (the list of links) -->
+    <script type='text/javascript'>
+// Define the paths, the partials (page templates) and the link names.
+var Pages = {
+  '/':        ['main.html',    'Home'],
+  '/addOwner': ['Owner/AddOwner.html', 'Add Owner'],
+  '/listOwner': ['Owner/ListOwner.html', 'List  Owner'],
+  '/updateOwner': ['Owner/UpdateOwner.html', 'Update Owner'],
+  '/viewOwner': ['Owner/ViewOwner.html', 'View Owner'],
+  
+  '/addStaffs': ['Staffs/AddStaff.html', 'Add Staff'],
+  '/updateStaffs': ['Staffs/UpdateStaff.html', 'Update Staff`'],
+  '/listStaffs': ['Staffs/ListStaff.html', 'List staff'],
+  
+  '/updateTenant': ['Tenant/updateTenant.html', 'update Tenant'],
+  '/addTenant': ['Tenant/AddTenant.html', 'Add Tenant'],
+  '/listTenant': ['Tenant/ListTenant.html', 'List Tenant'],
+  
+  '/updateVendors': ['Vendors/updateVendor.html', 'update Vendor'],
+  '/addVendors': ['Vendors/AddVendor.html', 'Add Vendor'],
+  '/listVendors': ['Vendors/ListVendor.html', 'List Vendor'],
+  
+  '/createIncident': ['Incidents/createIncident.html', 'Create Incident'],
+  '/listIncident': ['Incidents/listIncident.html', 'List Incidents'],
+  '/updateIncident': ['Incidents/updateIncident.html', 'Update Incident'],
+  
+  '/createReceipt': ['Receipt/createReceipt.html', 'Create Receipt'],
+  '/generateReceipt': ['Receipt/generateReceipt.html', 'Generate All Receipts'],
+  '/listReceipt': ['Receipt/listReceipt.html', 'List Receipts'],
+  
+  '/addExpenses': ['Expenses/addExpenses.html', 'Add Expenses'],
+  '/listExpenses': ['Expenses/listExpenses.html', 'List Expensess'],
+  '/updateExpenses': ['Expenses/updateExpenses.html', 'Update Expenses'],
+  '/viewExpenses': ['Expenses/viewExpenses.html', 'View Expenses'],
+  
+  '/addPayments': ['Payments/addPayments.html', 'Add Payments'],
+  '/listPayments': ['Payments/listPayments.html', 'List Payments'],
+  '/updatePayments': ['Payments/updatePayments.html', 'Update Payments'],
+  
+  '/generateInvoices': ['Invoices/generateInvoices.html', 'Generate Invoices'],
+  '/listInvoices': ['Invoices/listInvoices.html', 'List Invoices'],
+};
+    </script>
+
+  </head>
+  <body ng-app="angularjsSimpleWebsiteApp" class="padder">
+
+    <!-- header -->
+    <!-- uses NavigationLinks as a controller -->
+    <div ng-include="'views/links.html'"></div>
+
+    <!-- Your site or application content will appear here -->
+    <div ng-view="">
+    </div>
+
+    <div class="footer" title='comes from index.html'>
+      <p>the common footer 
+        - <a href='https://github.com/kurmanka/angularjs-routing-demo/'>github</a>
+      </p>
+    </div>
+
+
+    <script src="bower_components/jquery/jquery.js"></script>
+  
+    <!-- the angular core and the ngRoute module --> 
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+    <!-- the main angular app code -->
+    <script src="scripts/app.js"></script>
+
+</body>
+</html>
